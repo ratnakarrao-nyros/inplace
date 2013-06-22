@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+<div id="user_account">
+  <h1>User details</h1>
+  <%= link_to "Go back to USERS", users_path %>
+  <p style="margin-left:48em">Click to edit</p>
+  <table>
+    <tr>
+      <td>Name <a id="editme" href="#">(edit me)</a></td>
+      <td id="name">
+        <%= best_in_place @user, :name, :type => :input, :activator => "#editme" %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Age</td>
+      <td id="age">
+        <%= best_in_place @user, :age, :type => :input %>
+      </td>
+    </tr>
+  
+     <tr>
+      <td>location</td>
+      <td id="location">
+        <%= best_in_place @user, :location, :type => :input %>
+      </td>
+    </tr>
+
+     <tr>
+      <td>Contact</td>
+      <td id="contact">
+        <%= best_in_place @user, :contact, :type => :input %>
+      </td>
+    </tr>
+	
+    <tr>
+      <td>Degree</td>
+      <td id="degree">
+        <%= best_in_place @user, :degree, :type => :input %>
+      </td>
+    </tr>
+  </table>
+  <br />
+  <hr />
+  <p>App <b>features</b>:</p>
+  <ul>
+  <li>this app using best_in_place gem for inplace editing</li>
+  <li>Click any field to update value </li>
+  </ul>
+
+</div>
